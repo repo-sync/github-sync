@@ -7,7 +7,7 @@ A GitHub Action for syncing the current repository using **force push**.
  * Sync branches between two Github repositories
  * Sync branches from a remote repository
  * Github action can be triggered on a timer or on push
- * To push to a remote repository, please checkout [wei/git-sync](https://github.com/wei/git-sync)
+ * To push to a remote repository, please checkout [wei/git-sync](https://github.com/marketplace/actions/git-sync-action)
 
 
 ## Usage
