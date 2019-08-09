@@ -14,16 +14,24 @@ A GitHub Action for syncing the current repository using **force push**.
 
 ### Github Actions
 ```
-action "repo-sync" {
-  uses = "wei/github-sync@master"
-  args = "$SOURCE_REPO $SOURCE_BRANCH:$DESTINATION_BRANCH"
-  secrets = ["GITHUB_TOKEN"]
-  env = {
-    SOURCE_REPO = ""
-    SOURCE_BRANCH = ""
-    DESTINATION_BRANCH = ""
-  }
-}
+# File: .github/workflows/repo-sync.yml
+
+on:
+  schedule:
+  - cron:  */15 * * * *
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: repo-sync
+      uses: wei/github-sync@master
+      env:
+        SOURCE_REPO: ""
+        SOURCE_BRANCH: ""
+        DESTINATION_BRANCH: ""
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      args: $SOURCE_REPO $SOURCE_BRANCH:$DESTINATION_BRANCH
 ```
 `GITHUB_TOKEN` must be checked under secrets. 
 
