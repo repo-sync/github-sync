@@ -18,7 +18,7 @@ A GitHub Action for syncing the current repository using **force push**.
 
 on:
   schedule:
-  - cron:  */15 * * * *
+  - cron:  "*/15 * * * *"
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
@@ -31,15 +31,14 @@ jobs:
         SOURCE_BRANCH: ""
         DESTINATION_BRANCH: ""
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      args: $SOURCE_REPO $SOURCE_BRANCH:$DESTINATION_BRANCH
+      with:
+        args: $SOURCE_REPO $SOURCE_BRANCH:$DESTINATION_BRANCH
 ```
-`GITHUB_TOKEN` must be checked under secrets. 
-
 If `SOURCE_REPO` is private or with another provider, either (1) use an authenticated HTTPS repo clone url like `https://username:access_token@github.com/username/repository.git` or (2) set a `SSH_PRIVATE_KEY` secret and use the SSH clone url
 
 
 ## Known Issue
-The job may fail if upstream has a `.workflow` file present. Consider using [git-sync](https://github.com/wei/git-sync) instead.
+The job may fail if upstream has a workflow file present. Consider using [git-sync](https://github.com/wei/git-sync) instead.
 
 
 ## Advanced Usage: Sync all branches
