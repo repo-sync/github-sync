@@ -25,16 +25,15 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: repo-sync
-      uses: wei/github-sync@master
+      uses: wei/github-sync@v1
       env:
         SOURCE_REPO: ""
         SOURCE_BRANCH: ""
         DESTINATION_BRANCH: ""
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      args: $SOURCE_REPO $SOURCE_BRANCH:$DESTINATION_BRANCH
+      with:
+        args: $SOURCE_REPO $SOURCE_BRANCH:$DESTINATION_BRANCH
 ```
-`GITHUB_TOKEN` must be checked under secrets. 
-
 If `SOURCE_REPO` is private or with another provider, either (1) use an authenticated HTTPS repo clone url like `https://username:access_token@github.com/username/repository.git` or (2) set a `SSH_PRIVATE_KEY` secret and use the SSH clone url
 
 

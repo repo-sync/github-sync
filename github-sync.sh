@@ -13,6 +13,7 @@ fi
 echo "UPSTREAM_REPO=$UPSTREAM_REPO"
 echo "BRANCHES=$BRANCH_MAPPING"
 
+git remote set-url origin "https://$OWNER:$GITHUB_TOKEN@github.com/$OWNER/$REPO.git"
 git remote add upstream "$UPSTREAM_REPO"
 git fetch upstream
 git remote -v
