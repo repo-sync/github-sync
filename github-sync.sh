@@ -15,7 +15,9 @@ echo "BRANCHES=$BRANCH_MAPPING"
 
 # Github actions no longer auto set the username and GITHUB_TOKEN
 git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"
-git remote add upstream "$UPSTREAM_REPO"
-git fetch upstream
+git remote add tmp_upstream "$UPSTREAM_REPO"
+git fetch tmp_upstream
 git remote -v
-git push origin "refs/remotes/upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BRANCH_MAPPING#*:}" -f
+git push origin "refs/remotes/tmp_upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BRANCH_MAPPING#*:}" -f
+git remote rm tmp_upstream
+git remote -v
