@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: repo-sync
-      uses: wei/github-sync@master
+      uses: wei/github-sync@v1
       env:
         SOURCE_REPO: ""
         SOURCE_BRANCH: ""
