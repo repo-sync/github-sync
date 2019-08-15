@@ -5,7 +5,7 @@ set -e
 UPSTREAM_REPO=$1
 BRANCH_MAPPING=$2
 
-if ! echo $UPSTREAM_REPO | grep '.git'
+if ! echo $UPSTREAM_REPO | grep '\.git'
 then
   UPSTREAM_REPO="https://github.com/${UPSTREAM_REPO}.git"
 fi
