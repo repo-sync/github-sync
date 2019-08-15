@@ -15,6 +15,7 @@ fi
 echo "UPSTREAM_REPO=$UPSTREAM_REPO"
 echo "BRANCHES=$BRANCH_MAPPING"
 
+# Github actions no longer auto set the username and GITHUB_TOKEN
 git remote set-url origin "https://$OWNER:$GITHUB_TOKEN@github.com/$OWNER/$REPO"
 git remote add upstream "$UPSTREAM_REPO"
 git fetch upstream

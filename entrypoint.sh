@@ -9,6 +9,8 @@ then
   chmod 600 /root/.ssh/id_rsa
 fi
 
+# Github action changes $HOME to /github at runtime
+# therefore we always copy the SSH key to $HOME (aka. ~)
 mkdir -p ~/.ssh
 cp /root/.ssh/* ~/.ssh/ 2> /dev/null || true 
 
