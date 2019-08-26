@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: repo-sync
-      uses: wei/github-sync@v1
+      uses: repo-sync/github-sync@v1
       env:
         SOURCE_REPO: ""
         SOURCE_BRANCH: ""
@@ -34,11 +34,7 @@ jobs:
       with:
         args: $SOURCE_REPO $SOURCE_BRANCH:$DESTINATION_BRANCH
 ```
-If `SOURCE_REPO` is private or with another provider, either (1) use an authenticated HTTPS repo clone url like `https://username:access_token@github.com/username/repository.git` or (2) set a `SSH_PRIVATE_KEY` secret and use the SSH clone url
-
-
-## Known Issue
-The job may fail if upstream has a workflow file present. Consider using [git-sync](https://github.com/wei/git-sync) instead.
+If `SOURCE_REPO` is private or with another provider, either (1) use an authenticated HTTPS repo clone url like `https://<access_token>@github.com/owner/repository.git` or (2) set a `SSH_PRIVATE_KEY` secret and use the SSH clone url
 
 
 ## Advanced Usage: Sync all branches
