@@ -1,6 +1,6 @@
 # Github Sync
 
-A GitHub Action for syncing the current repository using **force push**. 
+A Github Action for syncing the current repository using **force push**. 
 
 
 ## Features
