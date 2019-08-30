@@ -1,0 +1,27 @@
+name: GitHub Sync
+author: Wei He <github@weispot.com>
+description: ⤵️ Sync current repository with remote
+branding:
+  icon: 'git-branch'
+  color: 'black'
+inputs:
+  source_repo:
+    description: GitHub public repo slug or full https clone url (with access_token if needed)
+    required: true
+  source_branch:
+    description: Branch name to sync from
+    required: true
+  destination_branch:
+    description: Branch name to sync to in this repo
+    required: true
+  github_token:
+    description: GitHub token secret
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    GITHUB_TOKEN: ${{ inputs.github_token }}
+  args:
+    - ${{ inputs.source_repo }}
+    - ${{ inputs.source_branch }}:${{ inputs.destination_branch }}
