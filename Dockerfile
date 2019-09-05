@@ -1,7 +1,7 @@
 FROM alpine
 
 LABEL \
-  "name"="GitHub Sync" \
+  "name"="GitHub Repo Sync" \
   "homepage"="https://github.com/marketplace/actions/github-sync" \
   "repository"="https://github.com/repo-sync/github-sync" \
   "maintainer"="Wei He <github@weispot.com>"
