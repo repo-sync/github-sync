@@ -26,6 +26,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "alex-page",
+      "name": "Alex Page",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/19199063?v=4",
+      "profile": "https://alexpage.com.au",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

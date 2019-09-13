@@ -1,5 +1,5 @@
 # GitHub Sync
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 A GitHub Action for syncing the current repository using **force push**. 
 
@@ -54,6 +54,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://whe.me"><img src="https://avatars3.githubusercontent.com/u/5880908?v=4" width="100px;" alt="Wei He"/><br /><sub><b>Wei He</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/commits?author=wei" title="Code">💻</a> <a href="https://github.com/repo-sync/github-sync/commits?author=wei" title="Documentation">📖</a> <a href="#design-wei" title="Design">🎨</a> <a href="#ideas-wei" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://zeke.sikelianos.com"><img src="https://avatars1.githubusercontent.com/u/2289?v=4" width="100px;" alt="Zeke Sikelianos"/><br /><sub><b>Zeke Sikelianos</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/commits?author=zeke" title="Documentation">📖</a> <a href="#ideas-zeke" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://alexpage.com.au"><img src="https://avatars1.githubusercontent.com/u/19199063?v=4" width="100px;" alt="Alex Page"/><br /><sub><b>Alex Page</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/issues?q=author%3Aalex-page" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
