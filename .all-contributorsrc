@@ -35,11 +35,22 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "xtqqczze",
+      "name": "xtqqczze",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/45661989?v=4",
+      "profile": "https://github.com/xtqqczze",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "projectName": "github-sync",
   "projectOwner": "repo-sync",
   "repoType": "github",
-  "repoHost": "https://github.com"
+  "repoHost": "https://github.com",
+  "skipCi": true
 }
