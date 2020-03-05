@@ -49,15 +49,19 @@ This will force sync ALL branches to match source repo. Branches that are create
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://whe.me"><img src="https://avatars3.githubusercontent.com/u/5880908?v=4" width="100px;" alt="Wei He"/><br /><sub><b>Wei He</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/commits?author=wei" title="Code">💻</a> <a href="https://github.com/repo-sync/github-sync/commits?author=wei" title="Documentation">📖</a> <a href="#design-wei" title="Design">🎨</a> <a href="#ideas-wei" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="http://zeke.sikelianos.com"><img src="https://avatars1.githubusercontent.com/u/2289?v=4" width="100px;" alt="Zeke Sikelianos"/><br /><sub><b>Zeke Sikelianos</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/commits?author=zeke" title="Documentation">📖</a> <a href="#ideas-zeke" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://alexpage.com.au"><img src="https://avatars1.githubusercontent.com/u/19199063?v=4" width="100px;" alt="Alex Page"/><br /><sub><b>Alex Page</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/issues?q=author%3Aalex-page" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://whe.me"><img src="https://avatars3.githubusercontent.com/u/5880908?v=4" width="100px;" alt=""/><br /><sub><b>Wei He</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/commits?author=wei" title="Code">💻</a> <a href="https://github.com/repo-sync/github-sync/commits?author=wei" title="Documentation">📖</a> <a href="#design-wei" title="Design">🎨</a> <a href="#ideas-wei" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://zeke.sikelianos.com"><img src="https://avatars1.githubusercontent.com/u/2289?v=4" width="100px;" alt=""/><br /><sub><b>Zeke Sikelianos</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/commits?author=zeke" title="Documentation">📖</a> <a href="#ideas-zeke" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://alexpage.com.au"><img src="https://avatars1.githubusercontent.com/u/19199063?v=4" width="100px;" alt=""/><br /><sub><b>Alex Page</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/issues?q=author%3Aalex-page" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/xtqqczze"><img src="https://avatars1.githubusercontent.com/u/45661989?v=4" width="100px;" alt=""/><br /><sub><b>xtqqczze</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/commits?author=xtqqczze" title="Code">💻</a> <a href="https://github.com/repo-sync/github-sync/commits?author=xtqqczze" title="Documentation">📖</a></td>
   </tr>
 </table>
 
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
