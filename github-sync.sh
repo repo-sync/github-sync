@@ -29,5 +29,8 @@ git remote add tmp_upstream "$UPSTREAM_REPO"
 git fetch tmp_upstream
 git remote --verbose
 git push origin "refs/remotes/tmp_upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BRANCH_MAPPING#*:}" --force
+if [[ "$SYNC_TAGS" = true ]]; then
+  git push --tags
+fi
 git remote rm tmp_upstream
 git remote --verbose

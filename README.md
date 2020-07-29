@@ -1,9 +1,9 @@
 # GitHub Sync
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
-<!-- ALL-CONTRIBUTORS-BADGE:END --> 
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-A GitHub Action for syncing the current repository using **force push**. 
+A GitHub Action for syncing the current repository using **force push**.
 
 
 ## Features
@@ -11,6 +11,7 @@ A GitHub Action for syncing the current repository using **force push**.
  * Sync branches from a remote repository
  * GitHub action can be triggered on a timer or on push
  * To push to a remote repository, please checkout [git-sync](https://github.com/marketplace/actions/git-sync-action)
+ * Support syncing tags.
 
 
 ## Usage
