@@ -28,6 +28,6 @@ git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHU
 git remote add tmp_upstream "$UPSTREAM_REPO"
 git fetch tmp_upstream
 git remote --verbose
-git push origin "refs/remotes/tmp_upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BRANCH_MAPPING#*:}" --force
+git push origin "refs/remotes/tmp_upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BRANCH_MAPPING#*:}" --tags --force
 git remote rm tmp_upstream
 git remote --verbose
