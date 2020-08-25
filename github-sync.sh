@@ -23,7 +23,7 @@ fi
 echo "UPSTREAM_REPO=$UPSTREAM_REPO"
 echo "BRANCHES=$BRANCH_MAPPING"
 
-git config --unset-all http."https://github.com/".extraheader
+git config --unset-all http."https://github.com/".extraheader || :
 git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"
 git remote add tmp_upstream "$UPSTREAM_REPO"
 git fetch tmp_upstream
