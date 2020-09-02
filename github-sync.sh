@@ -15,7 +15,9 @@ if [[ -z "$BRANCH_MAPPING" ]]; then
   exit 1
 fi
 
-if ! echo $UPSTREAM_REPO | grep '\.git'
+# If the upstream repo does not have a ".git" suffix, we assume it's a shorthand for a github.com Username/Repo
+# However, this is ignored if the repo belongs to glitch.com and this allows us to use github as a backup repo 
+if [ ! $(echo $UPSTREAM_REPO | grep '\.git') ] && [ ! $(echo $UPSTREAM_REPO | grep 'api\.glitch\.com\/git\/') ]
 then
   UPSTREAM_REPO="https://github.com/${UPSTREAM_REPO}.git"
 fi
