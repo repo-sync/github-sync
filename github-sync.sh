@@ -15,9 +15,12 @@ if [[ -z "$BRANCH_MAPPING" ]]; then
   exit 1
 fi
 
-if ! echo $UPSTREAM_REPO | grep '\.git'
+if ! echo $UPSTREAM_REPO | grep -Eq ':|@|\.git\/?$'
 then
+  echo "UPSTREAM_REPO does not seem to be a valid git URI, assuming it's a GitHub repo"
+  echo "Originally: $UPSTREAM_REPO"
   UPSTREAM_REPO="https://github.com/${UPSTREAM_REPO}.git"
+  echo "Now: $UPSTREAM_REPO"
 fi
 
 echo "UPSTREAM_REPO=$UPSTREAM_REPO"
