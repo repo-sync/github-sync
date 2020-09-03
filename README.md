@@ -1,6 +1,6 @@
 # GitHub Sync
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END --> 
 
 A GitHub Action for syncing the current repository using **force push**. 
@@ -59,6 +59,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://zeke.sikelianos.com"><img src="https://avatars1.githubusercontent.com/u/2289?v=4" width="100px;" alt=""/><br /><sub><b>Zeke Sikelianos</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/commits?author=zeke" title="Documentation">📖</a> <a href="#ideas-zeke" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://alexpage.com.au"><img src="https://avatars1.githubusercontent.com/u/19199063?v=4" width="100px;" alt=""/><br /><sub><b>Alex Page</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/issues?q=author%3Aalex-page" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/xtqqczze"><img src="https://avatars1.githubusercontent.com/u/45661989?v=4" width="100px;" alt=""/><br /><sub><b>xtqqczze</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/commits?author=xtqqczze" title="Code">💻</a> <a href="https://github.com/repo-sync/github-sync/commits?author=xtqqczze" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://unstoppable.software"><img src="https://avatars1.githubusercontent.com/u/70325615?v=4" width="100px;" alt=""/><br /><sub><b>Kay Harrison-Sims</b></sub></a><br /><a href="https://github.com/repo-sync/github-sync/issues?q=author%3AGlitchShtick" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
