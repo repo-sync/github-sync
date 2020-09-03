@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
@@ -15,9 +15,10 @@ if [[ -z "$BRANCH_MAPPING" ]]; then
   exit 1
 fi
 
-# If the upstream repo does not look like a valid URI for git, we assume it's a shorthand for a github.com Username/Repo
-if [[ ! $UPSTREAM_REPO =~ ^\w{3,6}:\/\/|@|\.git\/?$ ]]; then
-  echo "UPSTREAM_REPO does not seem to be a valid git URI, we'll try and convert this to a github.com link"
+# If the upstream repo does not look like a valid URI for git, we assume it's a shorthand for a github.com owner/repo
+if ! echo $UPSTREAM_REPO | grep -Eq ':|@'
+then
+  echo "UPSTREAM_REPO does not seem to be a valid git URI, assuming it's a GitHub repo"
   echo "Originally: $UPSTREAM_REPO"
   UPSTREAM_REPO="https://github.com/${UPSTREAM_REPO}.git"
   echo "Now: $UPSTREAM_REPO"

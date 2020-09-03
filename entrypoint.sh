@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
@@ -20,4 +20,4 @@ if [[ ! -z "$SSH_PRIVATE_KEY" ]]; then
   cp /root/.ssh/* ~/.ssh/ 2> /dev/null || true 
 fi
 
-bash -c "/github-sync.sh $*"
+sh -c "/github-sync.sh $*"
