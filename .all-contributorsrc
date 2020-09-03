@@ -45,6 +45,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "GlitchShtick",
+      "name": "Kay Harrison-Sims",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/70325615?v=4",
+      "profile": "https://unstoppable.software",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
