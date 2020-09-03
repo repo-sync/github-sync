@@ -15,7 +15,6 @@ if [[ -z "$BRANCH_MAPPING" ]]; then
   exit 1
 fi
 
-# If the upstream repo does not look like a valid URI for git, we assume it's a shorthand for a github.com owner/repo
 if ! echo $UPSTREAM_REPO | grep -Eq ':|@'
 then
   echo "UPSTREAM_REPO does not seem to be a valid git URI, assuming it's a GitHub repo"
