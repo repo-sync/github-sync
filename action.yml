@@ -3,7 +3,7 @@ author: Wei He <github@weispot.com>
 description: ⤵️ Sync current repository with remote
 branding:
   icon: 'git-branch'
-  color: 'black'
+  color: 'gray-dark'
 inputs:
   source_repo:
     description: GitHub public repo slug or full https clone url (with access_token if needed)

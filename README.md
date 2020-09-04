@@ -26,9 +26,11 @@ jobs:
   repo-sync:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
     - name: repo-sync
-      uses: repo-sync/github-sync@v2
+      uses: docker://ghcr.io/repo-sync/github-sync@v2
       with:
         source_repo: ""
         source_branch: ""
