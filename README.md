@@ -22,6 +22,8 @@ A GitHub Action for syncing the current repository using **force push**.
 on:
   schedule:
   - cron:  "*/15 * * * *"
+  workflow_dispatch:
+
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
@@ -30,7 +32,7 @@ jobs:
       with:
         persist-credentials: false
     - name: repo-sync
-      uses: docker://ghcr.io/repo-sync/github-sync@v2
+      uses: repo-sync/github-sync@v2
       with:
         source_repo: ""
         source_branch: ""

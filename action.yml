@@ -19,7 +19,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: docker://ghcr.io/repo-sync/github-sync:v2
   env:
     GITHUB_TOKEN: ${{ inputs.github_token }}
   args:
