@@ -17,11 +17,15 @@ inputs:
   github_token:
     description: GitHub token secret
     required: true
+  sync_tags:
+    description: Should tags also be synced
+    required: false
 runs:
   using: 'docker'
   image: docker://ghcr.io/repo-sync/github-sync:v2.2.2
   env:
     GITHUB_TOKEN: ${{ inputs.github_token }}
+    SYNC_TAGS: ${{ inputs.sync_tags }}
   args:
     - ${{ inputs.source_repo }}
     - ${{ inputs.source_branch }}:${{ inputs.destination_branch }}
