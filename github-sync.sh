@@ -40,8 +40,12 @@ git remote --verbose
 
 echo "Pushing changings from tmp_upstream to origin"
 git push origin "refs/remotes/tmp_upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BRANCH_MAPPING#*:}" --force
+
 if [[ "$SYNC_TAGS" = true ]]; then
-  git push --tags
+  echo "Force syncing all tags"
+  git tag -d $(git tag -l) > /dev/null
+  git fetch tmp_upstream --tags --quiet
+  git push origin --tags --force
 fi
 
 echo "Removing tmp_upstream"
