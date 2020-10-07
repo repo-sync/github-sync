@@ -16,6 +16,8 @@ A GitHub Action for syncing the current repository using **force push**.
 
 ## Usage
 
+Create a personal access token and add to repository's secret as `PAT`
+
 ### GitHub Actions
 ```
 # File: .github/workflows/repo-sync.yml
@@ -38,7 +40,7 @@ jobs:
         source_repo: ""
         source_branch: ""
         destination_branch: ""
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PAT }}
 ```
 If `source_repo` is private or with another provider, either (1) use an authenticated HTTPS repo clone url like `https://${access_token}@github.com/owner/repository.git` or (2) set a `SSH_PRIVATE_KEY` secret environment variable and use the SSH clone url
 
