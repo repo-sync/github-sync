@@ -22,7 +22,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: docker://ghcr.io/repo-sync/github-sync:v2.2.2
+  image: docker://ghcr.io/repo-sync/github-sync:v2.3.0
   env:
     GITHUB_TOKEN: ${{ inputs.github_token }}
     SYNC_TAGS: ${{ inputs.sync_tags }}
