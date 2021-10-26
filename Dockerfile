@@ -8,7 +8,7 @@ LABEL \
   org.opencontainers.image.source="https://github.com/repo-sync/github-sync" \
   org.opencontainers.image.licenses="MIT" \
   org.opencontainers.image.authors="Wei He <github@weispot.com>" \
-  maintainer="Wei He <github@weispot.com>"
+  maintainer="Tim Levett<tim.levett@grafana.com>"
 
 RUN apk add --no-cache git openssh-client && \
   echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
