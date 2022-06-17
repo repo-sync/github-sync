@@ -11,6 +11,9 @@ inputs:
   source_branch:
     description: Branch name to sync from
     required: true
+  destination_repo:
+    description: name to sync to this repo
+    required: true
   destination_branch:
     description: Branch name to sync to in this repo
     required: true
