@@ -25,7 +25,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: docker://ghcr.io/repo-sync/github-sync:v2.3.0
+  image: docker://registry.cn-qingdao.aliyuncs.com/alvin125/github:v3
   env:
     GITHUB_TOKEN: ${{ inputs.github_token }}
     SYNC_TAGS: ${{ inputs.sync_tags }}
