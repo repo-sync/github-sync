@@ -28,8 +28,8 @@ echo "BRANCHES=$BRANCH_MAPPING"
 
 git config --unset-all http."https://github.com/".extraheader || :
 
-echo "Resetting origin to: https://$GITHUB_ACTOR:$GITHUB_TOKEN@$DES_REPO/$GITHUB_REPOSITORY"
-git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@$DES_REPO/$GITHUB_REPOSITORY"
+echo "Resetting origin to: https://$GITHUB_ACTOR:$DES_REPO_TOKEN@$DES_REPO/$GITHUB_REPOSITORY"
+git remote set-url origin "https://$GITHUB_ACTOR:$DES_REPO_TOKEN@$DES_REPO/$GITHUB_REPOSITORY"
 
 echo "Adding tmp_upstream $UPSTREAM_REPO"
 git remote add tmp_upstream "$UPSTREAM_REPO"
