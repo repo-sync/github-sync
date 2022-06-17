@@ -29,6 +29,7 @@ runs:
   env:
     GITHUB_TOKEN: ${{ inputs.github_token }}
     SYNC_TAGS: ${{ inputs.sync_tags }}
+    DES_REPO: ${{ inputs.destination_repo }}
   args:
     - ${{ inputs.source_repo }}
     - ${{ inputs.source_branch }}:${{ inputs.destination_branch }}
