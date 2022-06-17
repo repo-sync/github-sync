@@ -1,4 +1,4 @@
-name: GitHub Repo Sync
+name: clone GitHub Repo Sync
 author: Wei He <github@weispot.com>
 description: ⤵️ Sync current repository with remote
 branding:
