@@ -38,8 +38,9 @@ echo "Fetching tmp_upstream"
 git fetch tmp_upstream --quiet
 git remote --verbose
 
-echo "Pushing changings from tmp_upstream to origin"
-git push origin "refs/remotes/tmp_upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BRANCH_MAPPING#*:}" --force
+echo "Pushing changes (not forcing) from tmp_upstream to origin"
+#git push origin "refs/remotes/tmp_upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BRANCH_MAPPING#*:}" --force
+git push origin "refs/remotes/tmp_upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BRANCH_MAPPING#*:}"
 
 if [[ "$SYNC_TAGS" = true ]]; then
   echo "Force syncing all tags"
