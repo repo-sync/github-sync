@@ -44,6 +44,9 @@ jobs:
 ```
 If `source_repo` is private or with another provider, either (1) use an authenticated HTTPS repo clone url like `https://${access_token}@github.com/owner/repository.git` or (2) set a `SSH_PRIVATE_KEY` secret environment variable and use the SSH clone url
 
+### Workflow overwriting
+
+If `destination_branch` and the branch where you will create this workflow will be the same, The workflow (and all files) will be overwritten by `source_branch` files. A potential solution is: Create a new branch with the actions file and make it the default branch.
 
 ## Advanced Usage: Sync all branches
 1. Make a backup
