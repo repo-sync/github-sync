@@ -3,12 +3,12 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END --> 
 
-A GitHub Action for syncing the current repository using **force push**.
+A GitHub Action for syncing two repositories using **force push**.
 
 
 ## Features
  * Sync branches between two GitHub repositories
- * Sync branches from a remote repository
+ * Sync branches from one remote repository to another
  * GitHub action can be triggered on a timer or on push
  * To push to a remote repository, please checkout [git-sync](https://github.com/marketplace/actions/git-sync-action)
  * Support syncing tags.
@@ -16,6 +16,9 @@ A GitHub Action for syncing the current repository using **force push**.
 
 ## Usage
 
+This action operates in two "modes", a local mode (using the current GitHub repository as a source of truth where the workflow is running) or remote mode to sync two repositories outside of the workflow repo.
+
+### Local mode
 Create a personal access token and add to repository's secret as `PAT`
 
 ### GitHub Actions
@@ -43,6 +46,39 @@ jobs:
         github_token: ${{ secrets.PAT }}
 ```
 If `source_repo` is private or with another provider, either (1) use an authenticated HTTPS repo clone url like `https://${access_token}@github.com/owner/repository.git` or (2) set a `SSH_PRIVATE_KEY` secret environment variable and use the SSH clone url
+
+### Remote mode
+Set the requisite secrets for syncing two remote repositories on the GitHub repository that will execute this action.
+```
+# File: .github/workflows/repo-sync.yml
+on:
+  schedule:
+  - cron:  "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - env:
+        SOURCE_TOKEN: ${{ secrets.SOURCE_TOKEN }}
+      run: |
+        git clone https://$SOURCE_TOKEN@<remote-host>/user/foo-repo.git foo-repo/
+    - name: repo-sync
+      uses: repo-sync/github-sync@v2
+      working-directory: ./foo-repo
+      with:
+        source_repo: "user1/foo-repo"
+        source_host: github.com # If omitted, defaults to github.com
+        source_token: ${{ secrets.SOURCE_TOKEN }}
+        source_user: "user1"
+        source_branch: "main"
+        destination_repo: "user2/bar-repo"
+        destination_host: gitlab.com
+        destination_user: oauth2
+        destination_token: ${{ secrets.DESTINATION_TOKEN }}
+        destination_branch: "main"
+```
 
 ### Workflow overwriting
 
