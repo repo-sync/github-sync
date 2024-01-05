@@ -16,8 +16,6 @@ A GitHub Action for syncing the current repository using **force push**.
 
 ## Usage
 
-Create a personal access token and add to repository's secret as `PAT`
-
 ### GitHub Actions
 ```
 # File: .github/workflows/repo-sync.yml
