@@ -1,7 +1,7 @@
 # GitHub Sync
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END --> 
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A GitHub Action for syncing the current repository using **force push**.
 
@@ -31,7 +31,7 @@ jobs:
   repo-sync:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         persist-credentials: false
     - name: repo-sync
