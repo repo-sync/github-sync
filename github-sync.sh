@@ -50,9 +50,7 @@ elif [[ -n "$SYNC_TAGS" ]]; then
   echo "Force syncing tags matching pattern: $SYNC_TAGS"
   git tag -d $(git tag -l) > /dev/null
   git fetch tmp_upstream --tags --quiet
-  for tag in $(git tag -l "$SYNC_TAGS"); do
-    git push origin "refs/tags/$tag" --force
-  done
+  git tag | grep "$SYNC_TAGS" | xargs --no-run-if-empty git push origin --force
 fi
 
 echo "Removing tmp_upstream"
