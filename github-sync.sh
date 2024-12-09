@@ -46,6 +46,11 @@ if [[ "$SYNC_TAGS" = true ]]; then
   git tag -d $(git tag -l) > /dev/null
   git fetch tmp_upstream --tags --quiet
   git push origin --tags --force
+elif [[ -n "$SYNC_TAGS" ]]; then
+  echo "Force syncing tags matching pattern: $SYNC_TAGS"
+  git tag -d $(git tag -l) > /dev/null
+  git fetch tmp_upstream --tags --quiet
+  git tag | grep "$SYNC_TAGS" | xargs --no-run-if-empty git push origin --force
 fi
 
 echo "Removing tmp_upstream"
