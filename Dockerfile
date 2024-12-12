@@ -10,8 +10,12 @@ LABEL \
   org.opencontainers.image.authors="Wei He <github@weispot.com>" \
   maintainer="Wei He <github@weispot.com>"
 
-RUN apk add --no-cache git openssh-client && \
-  echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+RUN apk add --no-cache \
+        git \
+        git-lfs \
+        openssh-client
+
+RUN echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 
 ADD *.sh /
 
