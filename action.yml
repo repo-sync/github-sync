@@ -1,6 +1,6 @@
 name: GitHub Repo Sync
 author: Wei He <github@weispot.com>
-description: ⤵️ Sync current repository with remote
+description: ⤵️ Sync two repositories using GitHub Actions
 branding:
   icon: 'git-branch'
   color: 'gray-dark'
@@ -14,9 +14,24 @@ inputs:
   destination_branch:
     description: Branch name to sync to in this repo
     required: true
+  source_host:
+    description: Hostname of the source repo if different from github.com. If set, the source_repo must be repo slug.
+    required: false
+  destination_host:
+    description: Hostname of the destination repo if different from github.com
+    required: false
+  destination_repo:
+    description: Git repo slug. If not provided, the source_repo will be used.
+    required: false
+  destination_user:
+    description: GitHub username for pushing to the destination repo. If not provided, the default GITHUB_ACTOR will be used.
+    required: false
+  destination_token:
+    description: GitHub token secret for pushing to the destination repo. If not provided, the default GITHUB_TOKEN will be used.
+    required: false
   github_token:
-    description: GitHub token secret
-    required: true
+    description: GitHub token secret for accessing the source repo.
+    required: false
   sync_tags:
     description: Should tags also be synced
     required: false
@@ -26,6 +41,13 @@ runs:
   env:
     GITHUB_TOKEN: ${{ inputs.github_token }}
     SYNC_TAGS: ${{ inputs.sync_tags }}
+    SOURCE_HOST: ${{ inputs.source_host }}
+    SOURCE_TOKEN: ${{ inputs.github_token }}
+    SOURCE_USER: ${{ github.actor }}
+    DESTINATION_HOST: ${{ inputs.destination_host }}
+    DESTINATION_USER: ${{ inputs.destination_user }}
+    DESTINATION_TOKEN: ${{ inputs.destination_token }}
+    DESTINATION_REPO: ${{ inputs.destination_repo }}
   args:
     - ${{ inputs.source_repo }}
     - ${{ inputs.source_branch }}:${{ inputs.destination_branch }}
