@@ -43,12 +43,12 @@ git push origin "refs/remotes/tmp_upstream/${BRANCH_MAPPING%%:*}:refs/heads/${BR
 
 if [ "$SYNC_TAGS" = true ]; then
   echo "Force syncing all tags"
-  git tag -d $(git tag -l) > /dev/null
+  git tag -d "$(git tag -l)" > /dev/null
   git fetch tmp_upstream --tags --quiet
   git push origin --tags --force
 elif [ -n "$SYNC_TAGS" ]; then
   echo "Force syncing tags matching pattern: $SYNC_TAGS"
-  git tag -d $(git tag -l) > /dev/null
+  git tag -d "$(git tag -l)" > /dev/null
   git fetch tmp_upstream --tags --quiet
   git tag | grep "$SYNC_TAGS" | xargs --no-run-if-empty git push origin --force
 fi
