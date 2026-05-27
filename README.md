@@ -1,4 +1,11 @@
 # GitHub Sync
+
+> ## ⚠️ Unmaintained
+>
+> This repository is being archived and is no longer maintained.
+>
+> Existing references pinned to a tag or commit SHA continue to function only as long as the `ghcr.io/repo-sync/github-sync:v2.3.0` container image (referenced from `action.yml`) remains available. No further updates, bug fixes, or security patches will be made. We recommend migrating to an alternative or vendoring the script into your own workflow.
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
